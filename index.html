@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+
+	<title>YouTube Thumbnail Generator</title>
+
+
+<base href="/youtube-thumbnail/">
+
+<!-- HTML_TAG_START -->
+<!--
+
+################################################
+##                                            ##
+##   Relative page:                           ##
+##     ./                                     ##
+##                                            ##
+##   Base URI:                                ##
+##     /youtube-thumbnail/                    ##
+##                                            ##
+##   Absolute path:                           ##
+##     /youtube-thumbnail/                    ##
+##                                            ##
+##   Server-rendered at:                      ##
+##     23.07.2021, 18:26:18 GMT+2             ##
+##                                            ##
+##   Version:                                 ##
+##     85                                     ##
+##                                            ##
+##   Directories (see Sources in DevTools):   ##
+##     - App directory: ./_/                  ##
+##     - Development directory: ./$/          ##
+##                                            ##
+##   +-----------------------+                ##
+##   | © 2021 Benjamin Aster |                ##
+##   +-----------------------+                ##
+##                                            ##
+################################################
+
+-->
+<!-- HTML_TAG_END -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+<link rel="icon" href="./_/logo.png">
+<link rel="apple-touch-icon" href="./_/logo.png">
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#000000">
+
+<meta name="robots" content="all">
+<meta name="description" content="Get the thumbnail of a YouTube video">
+<meta name="og:site_name" content="YouTube Thumbnail">
+<meta name="og:image" content="/youtube-thumbnail/_/logo.png">
+<meta name="author" content="Benjamin Aster">
+
+
+
+<link rel="modulepreload" href="/firebase/app.js">
+<link rel="modulepreload" href="/firebase/analytics.js">
+<link rel="modulepreload" href="/firebase/init.js">
+
+<!-- HTML_TAG_START -->
+<script type="module">
+	import "/firebase/app.js";
+	import "/firebase/analytics.js";
+	import "/firebase/init.js";
+
+
+	//# sourceMappingURL=/youtube-thumbnail/_/sourcemap.js.map
+</script>
+<!-- HTML_TAG_END -->
+
+<link rel="preload" as="style" href="/css/bootstrap-icons.css">
+
+<!-- HTML_TAG_START -->
+<style>
+	@import url("/css/bootstrap-icons.css");
+</style>
+<!-- HTML_TAG_END -->
+
+		
+
+		<link rel="modulepreload" href="/youtube-thumbnail/_/start-ac58e58b.js">
+		<link rel="modulepreload" href="/youtube-thumbnail/_/chunks/vendor-1f1eec1c.js">
+		<link rel="modulepreload" href="/youtube-thumbnail/_/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/youtube-thumbnail/_/pages/__layout.svelte-d8593b30.js">
+		<link rel="modulepreload" href="/youtube-thumbnail/_/chunks/utils-798ae020.js">
+		<link rel="modulepreload" href="/youtube-thumbnail/_/pages/index.svelte-6b0793fe.js">
+		<link rel="stylesheet" href="/youtube-thumbnail/_/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/youtube-thumbnail/_/assets/pages/__layout.svelte-8d899851.css">
+		<link rel="stylesheet" href="/youtube-thumbnail/_/assets/pages/index.svelte-91074739.css">
+
+		<script type="module">
+			import { start } from "/youtube-thumbnail/_/start-ac58e58b.js";
+			start({
+				target: document.body,
+				paths: {"base":"/youtube-thumbnail","assets":"/youtube-thumbnail"},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "always",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/youtube-thumbnail/_/pages/__layout.svelte-d8593b30.js"),
+						import("/youtube-thumbnail/_/pages/index.svelte-6b0793fe.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script><script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register("./service-worker.js", { scope: new URL(document.baseURI).pathname });
+			}
+		</script>
+</head>
+
+<body class="no-transition">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="checkbox" id="theme-toggler" hidden>
+
+<div id="actual-content" class="svelte-14g53aa">
+
+<noscript><input type="checkbox" id="javascript-banner-x" hidden class="svelte-cg2hs0">
+	<section class="svelte-cg2hs0"><strong class="message svelte-cg2hs0">For a better experience on this site, please enable JavaScript.
+</strong>
+<label for="javascript-banner-x" class="svelte-cg2hs0"><span class="bi-x-lg x svelte-cg2hs0"></span></label>
+<style class="svelte-cg2hs0">.no-transition,
+	.no-transition * {
+		transition: var(--transition-props);
+	}
+</style></section>
+</noscript>
+
+	<nav class="svelte-14g53aa"><button title="pop out window" class="bi-box-arrow-up-right svelte-14g53aa"></button>
+
+<button title="clear cache & reload" class="bi-arrow-clockwise svelte-14g53aa"></button>
+
+<label for="theme-toggler" title="toggle light/dark theme" class="bi-moon-fill svelte-14g53aa" id="theme-toggler-label" tabindex="0"></label></nav>
+
+	<main class="svelte-14g53aa">
+
+
+
+
+<h2>YouTube Thumbnail Image Generator</h2>
+
+<input type="search" placeholder="Paste the video link here." class="svelte-10ockh9">
+
+<br>
+
+<section hidden><a href="" rel="nofollow"><img src="" alt="YouTube thumnail" class="svelte-10ockh9"></a>
+
+	<p class="svelte-10ockh9"><a href="" rel="nofollow" class="svelte-10ockh9"></a>
+<button class="bi-clipboard svelte-10ockh9"></button></p>
+</section></main>
+
+	<footer class="svelte-14g53aa"><span>© 2021 Benjamin Aster</span></footer>
+</div>
+
+
+
+	<script type="application/json" data-type="svelte-data" data-url="/_/info.json">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"{\n\t\"version\": 85,\n\t\"timestamp\": 1627057578956,\n\t\"timestampString\": \"23.07.2021, 18:26:18 GMT+2\",\n\t\"appDir\": \"_\",\n\t\"srcDir\": \"$\"\n}"}</script>
+
+</body>
+
+</html>

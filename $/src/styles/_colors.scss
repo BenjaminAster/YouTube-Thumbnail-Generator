@@ -1,0 +1,105 @@
+//
+
+@use "sass:math";
+
+@import "functions-mixins";
+
+$hex-list: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f);
+
+// $from-dark: #00081f;
+// $to-dark: #e0e8ff;
+
+$from-dark: #000205;
+$to-dark: #fafcff;
+
+#actual-content {
+	// --is-light: 0;
+
+	$max: length($hex-list) - 1;
+
+	@for $i from 0 through $max {
+		$hex-num: nth($hex-list, $i + 1);
+
+		// $from-dark: #000817;
+		// $to-dark: #e8f0ff;
+
+		// $from-dark: #000619;
+		// $to-dark: #e6edff;
+
+		$dark-col: mix($to-dark, $from-dark, math.div($i * 100%, $max));
+		$light-col: mix(#000000, #ffffff, math.div($i * 100%, $max));
+
+		--col-#{$hex-num}: #{darkLight($dark-col, $light-col)};
+
+		@if ($i != $max) {
+			$dark-col: mix($to-dark, $from-dark, math.div(($i + 0.5) * 100%, $max));
+			$light-col: mix(#000000, #ffffff, math.div(($i + 0.5) * 100%, $max));
+
+			--col-#{$hex-num}8: #{darkLight($dark-col, $light-col)};
+		}
+	}
+
+	--extr-bg: #{darkLight(black, white)};
+}
+
+::-webkit-scrollbar {
+	background-color: mix($to-dark, $from-dark, 0%);
+
+	&-button,
+	&-thumb {
+		background-color: mix($to-dark, $from-dark, 60%);
+
+		&:hover {
+			background-color: mix($to-dark, $from-dark, 80%);
+		}
+	}
+}
+
+#theme-toggler {
+	& ~ #actual-content {
+		--is-light: 0;
+
+		#theme-toggler-label::before {
+			content: "\f494"; // moon-fill
+
+			animation-name: content-delay-moon;
+			animation-duration: 250ms;
+			animation-timing-function: ease;
+		}
+	}
+
+	&:checked ~ #actual-content {
+		--is-light: 1;
+
+		#theme-toggler-label::before {
+			content: "\f5a1"; // sun-fill
+			animation-name: content-delay-sun;
+		}
+
+		.dark-theme-activated::before {
+			content: "not ";
+		}
+	}
+}
+
+@keyframes content-delay-sun {
+	0% {
+		content: "\f494"; // moon-fill
+	}
+
+	100% {
+		content: "\f5a1"; // sun-fill
+	}
+}
+
+@keyframes content-delay-moon {
+	0% {
+		content: "\f5a1"; // sun-fill
+	}
+
+	100% {
+		content: "\f494"; // moon-fill
+	}
+}
+
+// ########

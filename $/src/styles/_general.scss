@@ -1,0 +1,68 @@
+@use "sass:math";
+
+* {
+	background: transparent;
+	color: var(--col-f);
+	box-sizing: border-box;
+	caret-color: var(--col-f);
+
+	transition: var(--transition-props);
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+
+	font-family: "Roboto", "Arial", "Segoe UI", "Nirmala UI", "Yu Gothic UI", sans-serif;
+
+	@media all and (display-mode: standalone), (display-mode: fullscreen) {
+		overscroll-behavior: none;
+	}
+}
+
+.no-transition {
+	&,
+	& * {
+		transition: none;
+	}
+}
+
+:root {
+	color-scheme: dark;
+
+	$transitionAttrs: 250ms ease;
+	$transitionStyleTypes: (color, background-color, border-color, box-shadow);
+	$transition: "";
+
+	@each $val in $transitionStyleTypes {
+		$transition: $transition + $val + " " + $transitionAttrs;
+		@if ($val != nth($transitionStyleTypes, length($transitionStyleTypes))) {
+			$transition: $transition + ",";
+		}
+	}
+
+	--transition-props: #{$transition};
+}
+
+::-webkit-scrollbar {
+	$scrollbarWidth: 1rem;
+	width: $scrollbarWidth;
+	height: $scrollbarWidth;
+
+	&-button,
+	&-thumb {
+		width: $scrollbarWidth;
+		height: $scrollbarWidth;
+
+		background-clip: padding-box;
+
+		border: math.div($scrollbarWidth, 4) solid transparent {
+			radius: math.div($scrollbarWidth, 2);
+		}
+	}
+
+	&-corner {
+		background: transparent;
+	}
+}

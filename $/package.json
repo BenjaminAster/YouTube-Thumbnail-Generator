@@ -1,0 +1,21 @@
+{
+	"name": "-",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"type": "module",
+	"prettier": {
+		"useTabs": true,
+		"semi": true,
+		"singleQuote": false,
+		"quoteProps": "preserve",
+		"trailingComma": "all",
+		"bracketSpacing": true,
+		"allowParens": "always",
+		"htmlWhitespaceSensitivity": "strict"
+	}
+}

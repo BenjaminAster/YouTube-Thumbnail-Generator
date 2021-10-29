@@ -1,0 +1,25 @@
+// #
+
+@import "functions-mixins";
+
+a {
+	color: darkLight(lightSkyBlue, cornflowerblue);
+}
+
+::selection {
+	color: var(--col-f);
+	background-color: darkLight(blue, lightSkyBlue);
+}
+
+br::selection {
+	background: transparent;
+}
+
+code {
+	background-color: var(--col-1);
+	padding: 0.2em;
+	border: 3px solid var(--col-2) {
+		radius: 0.3em;
+	};
+	font-family: "Consolas", monospace;
+}

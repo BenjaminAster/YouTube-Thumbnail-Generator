@@ -1,0 +1,9 @@
+{
+	"deno.enable": true,
+	"deno.lint": false,
+	"deno.unstable": true,
+	// "deno.config": "./_svelte/deno/tsconfig.json", 
+	// "deno.config": "./tsconfig.json",
+	// file:///C:/Users/Benja/Documents%20-%20SSD/Firebase/DeutschHaus/public/test/
+}
+

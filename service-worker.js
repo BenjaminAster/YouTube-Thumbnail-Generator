@@ -1,0 +1,1 @@
+importScripts("/workbox-sw.js");workbox.setConfig({debug:!1}),workbox.routing.registerRoute(new RegExp(".*"),new workbox.strategies.CacheFirst({cacheName:"workbox-cache"})),self.addEventListener("install",(async e=>{})),self.addEventListener("activate",(async e=>{}));

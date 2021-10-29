@@ -1,0 +1,24 @@
+// #
+
+img {
+	// border: 1px solid var(--col-a);
+	// border: 1px solid var(--col-a);
+	width: auto;
+	height: auto;
+
+	$bg-stripes-width: 1rem;
+	$bg-stripes-first: var(--col-1);
+	$bg-stripes-second: var(--col-2);
+	background-image: repeating-linear-gradient(
+		//
+		-45deg,
+		//
+		$bg-stripes-first,
+		//
+		$bg-stripes-first $bg-stripes-width,
+		//
+		$bg-stripes-second $bg-stripes-width,
+		//
+		$bg-stripes-second ($bg-stripes-width * 2)
+	);
+}
